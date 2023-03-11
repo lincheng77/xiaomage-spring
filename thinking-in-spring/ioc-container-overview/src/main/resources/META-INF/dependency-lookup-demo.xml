@@ -7,4 +7,8 @@
         <property name="age" value="1"></property>
         <property name="name" value="林城"></property>
     </bean>
+
+    <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
+        <property name="targetBeanName" value="user"></property>
+    </bean>
 </beans>
