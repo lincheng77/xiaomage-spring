@@ -8,6 +8,12 @@
         <property name="name" value="林城"></property>
     </bean>
 
+    <!--    primary=true 当查找或者注入时有多个bean 优先使用   -->
+    <bean id="userChild" class="edkso.cn.ioc.overview.domain.UserChild" parent="user"
+          primary="true">
+        <property name="parent" value="用户"></property>
+    </bean>
+
     <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
         <property name="targetBeanName" value="user"></property>
     </bean>

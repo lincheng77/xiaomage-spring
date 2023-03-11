@@ -5,6 +5,10 @@ public class User {
     private String name;
     private Integer age;
 
+    public User() {
+        System.out.println("调用user构造方法");
+    }
+
     public String getName() {
         return name;
     }
