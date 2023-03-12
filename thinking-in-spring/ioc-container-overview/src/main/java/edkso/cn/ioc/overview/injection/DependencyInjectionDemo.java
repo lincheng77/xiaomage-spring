@@ -22,7 +22,15 @@ public class DependencyInjectionDemo {
 
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INF/dependency-injection-demo.xml");
         UserRepository userRepository = (UserRepository) beanFactory.getBean("userRepository");
-        System.out.println(userRepository.getUsers());
+//        System.out.println(userRepository.getUsers());
+
+        //依赖注入得到的beanFactory
+        System.out.println(userRepository.getBeanFactory());
+        System.out.println(userRepository.getBeanFactory() == beanFactory);
+
+        //依赖查找
+        System.out.println(beanFactory.getBean(BeanFactory.class));
+
     }
 
 
